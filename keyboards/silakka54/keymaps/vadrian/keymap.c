@@ -45,7 +45,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [MOUSE] = LAYOUT(
         KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                            KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
         KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                            KC_TRNS, MS_WHLL, MS_UP, MS_WHLR, MS_WHLU, KC_TRNS,
-        KC_TRNS,  KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, KC_TRNS,                            KC_TRNS, MS_LEFT, MS_DOWN, MS_RIGHT, MS_WHLD, KC_TRNS,
+        KC_TRNS,  KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, KC_TRNS,                            KC_TRNS, MS_LEFT, MS_DOWN, MS_RGHT, MS_WHLD, KC_TRNS,
         KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                            REDO, PASTE, COPY, CUT, UNDO, KC_TRNS,
                                             KC_TRNS, KC_TRNS, KC_TRNS,           MS_BTN2,  MS_BTN1,  MS_BTN3
     ),
