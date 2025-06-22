@@ -1,0 +1,11 @@
+#pragma once
+
+#undef TAPPING_TERM
+#undef PERMISSIVE_HOLD
+#undef CHORDAL_HOLD
+#undef FLOW_TAP_TERM
+
+#define TAPPING_TERM 200
+#define PERMISSIVE_HOLD
+#define CHORDAL_HOLD
+#define FLOW_TAP_TERM 150
