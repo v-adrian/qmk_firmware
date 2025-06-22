@@ -3,6 +3,12 @@
 
 #include QMK_KEYBOARD_H
 
+#define UNDO
+#define CUT
+#define COPY
+#define PASTE
+#define REDO
+
 enum layers {
     BASE,
     MEDIA,
@@ -31,10 +37,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [NAV] = LAYOUT(
         KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                            KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-        KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                            KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-        KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                            KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-        KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                            KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-                                            KC_TRNS, KC_TRNS, KC_TRNS,           KC_TRNS,  KC_TRNS,  KC_TRNS
+        KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                            KC_INS, KC_HOME, KC_UP, KC_END, KC_PGUP, KC_TRNS,
+        KC_TRNS,  KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, KC_TRNS,                            KC_CAPS, KC_LEFT, KC_DOWN, KC_RIGHT, KC_PGDN, KC_TRNS,
+        KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                            REDO, PASTE, COPY, CUT, UNDO, KC_TRNS,
+                                            KC_TRNS, KC_TRNS, KC_TRNS,           KC_ENT,  KC_BSPC,  KC_DEL
     ),
     [MOUSE] = LAYOUT(
         KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                            KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
