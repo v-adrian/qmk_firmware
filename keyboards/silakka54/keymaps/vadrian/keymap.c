@@ -3,11 +3,11 @@
 
 #include QMK_KEYBOARD_H
 
-#define UNDO
-#define CUT
-#define COPY
-#define PASTE
-#define REDO
+#define UNDO C(KC_Z)
+#define CUT C(KC_X)
+#define COPY C(KC_C)
+#define PASTE C(KC_P)
+#define REDO C(KC_Y)
 
 enum layers {
     BASE,
