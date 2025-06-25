@@ -103,3 +103,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 };
 
+// Turn off permissive hold for pinky keys
+bool get_permissive_hold(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        // Do not select the hold action when another key is tapped.
+        case HRM_A:
+            return false;
+        case HRM_SC:
+            return false;
+
+        // Immediately select the hold action when another key is tapped.
+        default:
+            return true;
+    }
+}
