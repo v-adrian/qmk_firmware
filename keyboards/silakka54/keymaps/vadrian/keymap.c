@@ -20,6 +20,16 @@
 #define HRM_L RALT_T(KC_L)
 #define HRM_SC RGUI_T(KC_SCLN)
 
+// Layer switch keys
+#define MED_ESC LT(MEDIA,KC_ESC)
+#define NAV_SPC LT(NAV,KC_SPC)
+#define MOU_TAB LT(MOUSE,KC_TAB)
+#define SYM_ENT LT(SYM,KC_ENT)
+#define NUM_BSP LT(NUM,KC_BSPC)
+#define FUN_DEL LT(FUN,KC_DEL)
+#define T_GAME TG(GAME)
+
+// Other tap-hold keys
 #define C_ESC LCTL_T(KC_ESC)
 
 enum layers {
@@ -39,8 +49,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_GRV,  KC_1,  KC_2,  KC_3,             KC_4,           KC_5,             KC_6,           KC_7,            KC_8,          KC_9,   KC_0,    KC_MINS,
         KC_TAB,  KC_Q,  KC_W,  KC_E,             KC_R,           KC_T,             KC_Y,           KC_U,            KC_I,          KC_O,   KC_P,    KC_EQL,
         C_ESC,   HRM_A, HRM_S, HRM_D,            HRM_F,          KC_G,             KC_H,           HRM_J,           HRM_K,         HRM_L,  HRM_SC,  KC_QUOT,
-        CW_TOGG, KC_Z,  KC_X,  KC_C,             KC_V,           KC_B,             KC_N,           KC_M,            KC_COMM,       KC_DOT, KC_SLSH, TG(GAME),
-                               LT(MEDIA,KC_ESC), LT(NAV,KC_SPC), LT(MOUSE,KC_TAB), LT(SYM,KC_ENT), LT(NUM,KC_BSPC), LT(FUN,KC_DEL)
+        CW_TOGG, KC_Z,  KC_X,  KC_C,             KC_V,           KC_B,             KC_N,           KC_M,            KC_COMM,       KC_DOT, KC_SLSH, T_GAME,
+                               MED_ESC, NAV_SPC, MOU_TAB, SYM_ENT, NUM_BSP, FUN_DEL
     ),
     [GAME] = LAYOUT(
         KC_TRNS, KC_5,    KC_1, KC_2,    KC_3,   KC_4,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
