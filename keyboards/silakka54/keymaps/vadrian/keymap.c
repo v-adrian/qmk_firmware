@@ -36,11 +36,11 @@ enum layers {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [BASE] = LAYOUT(
-        KC_GRV,         KC_1,         KC_2,         KC_3,             KC_4,           KC_5,             KC_6,           KC_7,            KC_8,          KC_9,         KC_0,            KC_MINS,
-        KC_TAB,         KC_Q,         KC_W,         KC_E,             KC_R,           KC_T,             KC_Y,           KC_U,            KC_I,          KC_O,         KC_P,            KC_EQL,
-        C_ESC, HRM_A, HRM_S, HRM_D,     HRM_F,   KC_G,             KC_H,           HRM_J,    HRM_K,  HRM_L, HRM_SC, KC_QUOT,
-        CW_TOGG,        KC_Z,         KC_X,         KC_C,             KC_V,           KC_B,             KC_N,           KC_M,            KC_COMM,       KC_DOT,       KC_SLSH,         TG(GAME),
-                                                    LT(MEDIA,KC_ESC), LT(NAV,KC_SPC), LT(MOUSE,KC_TAB), LT(SYM,KC_ENT), LT(NUM,KC_BSPC), LT(FUN,KC_DEL)
+        KC_GRV,  KC_1,  KC_2,  KC_3,             KC_4,           KC_5,             KC_6,           KC_7,            KC_8,          KC_9,   KC_0,    KC_MINS,
+        KC_TAB,  KC_Q,  KC_W,  KC_E,             KC_R,           KC_T,             KC_Y,           KC_U,            KC_I,          KC_O,   KC_P,    KC_EQL,
+        C_ESC,   HRM_A, HRM_S, HRM_D,            HRM_F,          KC_G,             KC_H,           HRM_J,           HRM_K,         HRM_L,  HRM_SC,  KC_QUOT,
+        CW_TOGG, KC_Z,  KC_X,  KC_C,             KC_V,           KC_B,             KC_N,           KC_M,            KC_COMM,       KC_DOT, KC_SLSH, TG(GAME),
+                               LT(MEDIA,KC_ESC), LT(NAV,KC_SPC), LT(MOUSE,KC_TAB), LT(SYM,KC_ENT), LT(NUM,KC_BSPC), LT(FUN,KC_DEL)
     ),
     [GAME] = LAYOUT(
         KC_TRNS, KC_5,    KC_1, KC_2,    KC_3,   KC_4,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
@@ -60,14 +60,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,  KC_TRNS, KC_TRNS,
         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_INS,  KC_HOME, KC_UP,   KC_END,   KC_PGUP, KC_TRNS,
         KC_TRNS, KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, KC_TRNS, KC_CAPS, KC_LEFT, KC_DOWN, KC_RIGHT, KC_PGDN, SELWORD,
-        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, C_REDO,    C_PASTE,   C_COPY,    C_CUT,      C_UNDO,    KC_TRNS,
+        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, C_REDO,  C_PASTE, C_COPY,  C_CUT,    C_UNDO,  KC_TRNS,
                                    KC_TRNS, KC_TRNS, KC_TRNS, KC_ENT,  KC_BSPC, KC_DEL
     ),
     [MOUSE] = LAYOUT(
         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, MS_WHLL, MS_UP,   MS_WHLR, MS_WHLU, KC_TRNS,
         KC_TRNS, KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, KC_TRNS, KC_TRNS, MS_LEFT, MS_DOWN, MS_RGHT, MS_WHLD, KC_TRNS,
-        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, C_REDO,    C_PASTE,   C_COPY,    C_CUT,     C_UNDO,    KC_TRNS,
+        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, C_REDO,  C_PASTE, C_COPY,  C_CUT,   C_UNDO,  KC_TRNS,
                                    KC_TRNS, KC_TRNS, KC_TRNS, MS_BTN2, MS_BTN1, MS_BTN3
     ),
     [SYM] = LAYOUT(
