@@ -108,12 +108,21 @@ bool get_permissive_hold(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         // Do not select the hold action when another key is tapped.
         case HRM_A:
-            return false;
         case HRM_SC:
             return false;
-
         // Immediately select the hold action when another key is tapped.
         default:
             return true;
+    }
+}
+
+// Higher tapping term for pinky keys
+uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case HRM_A:
+        case HRM_SC:
+            return TAPPING_TERM + 40;
+        default:
+            return TAPPING_TERM;
     }
 }
