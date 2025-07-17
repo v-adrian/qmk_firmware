@@ -103,7 +103,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 };
 
-// Turn off permissive hold for pinky keys
+/* Turn off permissive hold for pinky keys
 bool get_permissive_hold(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         // Do not select the hold action when another key is tapped.
@@ -115,14 +115,25 @@ bool get_permissive_hold(uint16_t keycode, keyrecord_t *record) {
             return true;
     }
 }
+*/
 
 // Higher tapping term for pinky keys
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case HRM_A:
         case HRM_SC:
-            return TAPPING_TERM + 40;
+            return TAPPING_TERM + 50;
         default:
             return TAPPING_TERM;
     }
 }
+
+// Chordal hold layout
+const char chordal_hold_layout[MATRIX_ROWS][MATRIX_COLS] PROGMEM =
+    LAYOUT(
+        'L', 'L', 'L', 'L', 'L', 'L',  'R', 'R', 'R', 'R', 'R', 'R', 
+        'L', 'L', 'L', 'L', 'L', 'L',  'R', 'R', 'R', 'R', 'R', 'R', 
+        'L', 'L', 'L', 'L', 'L', 'L',  'R', 'R', 'R', 'R', 'R', 'R', 
+        'L', 'L', 'L', 'L', 'L', 'L',  'R', 'R', 'R', 'R', 'R', 'R', 
+                       '*', '*', '*',  '*', '*', '*'
+    );
